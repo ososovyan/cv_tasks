@@ -1,12 +1,11 @@
 #include "opencv2/opencv.hpp"
 #include <vector>
 #include <iostream>
-
+ //для цвета роботов
 typedef enum {
 	RED_ROB,
 	GREEN_ROB,
 	BLUE_ROB,
-	LIGHT_SRC
 } OBJ_TYPE;
 
 void task_1(cv::Mat& src) {
@@ -102,8 +101,10 @@ void findRobotContour(cv::Mat& src, cv::Mat& dst, OBJ_TYPE obj, cv::Point cm_l) 
 	std::vector<std::vector<cv::Point>> contours;
 	std::vector<cv::Vec4i> hierarchy;
 	cv::Scalar color;
+	//у карсного цвета два диапазона
 	cv::Mat red_lower = src.clone();
 	cv::Mat red_upper = src.clone();
+	//Фильтрация по нужному диапазону(для каждого цвета свой)
 	switch (obj) {
 	case RED_ROB:
 		cv::inRange(tmp, cv::Scalar(0, 40, 59), cv::Scalar(10, 168, 255), red_lower);
@@ -135,7 +136,9 @@ void findRobotContour(cv::Mat& src, cv::Mat& dst, OBJ_TYPE obj, cv::Point cm_l) 
 		return;
 	}
 	int target = 0;
+	//Кdадрат длины curernt, лень считать корень
 	double buf_l = 0;
+	//Кdадрат длины global min
 	double buf_l_min = 0;
 	
 	for (int i = 0; i != contours.size(); ++i) {
@@ -146,18 +149,22 @@ void findRobotContour(cv::Mat& src, cv::Mat& dst, OBJ_TYPE obj, cv::Point cm_l) 
 			//Поиск центра масс,и его сравнение 
 			double cm_x = m.m10 / m.m00 ;
 			double cm_y = m.m01 / m.m00;
+			//Переходим в сист кординат ист света
 			cm_x -= cm_l.x;
 			cm_y -= cm_l.y;
 			buf_l = cm_x * cm_x + cm_y * cm_y;
+			//Так как минимум исчет а нач знач ноль. на первой итерации нужно инициализировать 
 			if (i == 0) {
 				buf_l_min = buf_l;
 			}
 			else if (buf_l_min > buf_l) {
+				//Если меньше то новый мин
 				buf_l_min = buf_l;
 				target = i;
 			}
 		}
 	}
+	//Построение центра соседа
 	cv::Moments m = cv::moments(contours[target]);
 	double cm_x = m.m10 / m.m00;
 	double cm_y = m.m01 / m.m00;
@@ -182,7 +189,7 @@ void findLightContour(cv::Mat& src, cv::Point& cm_l) {
 	if (contours.empty()) {
 		return;
 	}
-	//Ищем самый большой контур возможно это цель
+	//Ищем самый большой контур возможно это цель(местами путаются засветы)
 	int target = 0;
 	double buf = cv::contourArea(contours[target]);
 	for (int i = 0; i != contours.size(); ++i) {
@@ -239,6 +246,7 @@ void gk(cv::Mat& img, cv::Mat& temp) {
 	}
 }
 int main() {
+	//Нужно раскоментировать нужную часть 
 	/*//-----------------------------test_1 video---------------------------------------------------
 	std::string path_1 = "img_zadan/allababah/V2.mp4";
 	cv::VideoCapture cap(path_1);
