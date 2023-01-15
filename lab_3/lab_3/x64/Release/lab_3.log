@@ -1,0 +1,77 @@
+﻿  main.cpp
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(50,26): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(50,46): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(52,29): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(52,56): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(87,26): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(87,46): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(89,29): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(89,56): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(164,34): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(164,28): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(201,34): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(201,28): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(202,25): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\ososo\source\repos\lab_3\lab_3\main.cpp(202,19): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=int
+          ]
+  Создание кода
+  7 of 118 functions ( 5.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  lab_3.vcxproj -> C:\Users\ososo\source\repos\lab_3\x64\Release\lab_3.exe
