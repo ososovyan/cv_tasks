@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\ososo\source\repos\task_1\task_1\main.cpp(2,10): fatal  error C1083: Не удается открыть файл включение: opencv2\core.hpp: No such file or directory,
+  Source.cpp
+  Создание кода...
